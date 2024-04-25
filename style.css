@@ -112,15 +112,15 @@ body{
     width: 100%;
 }
 
-.delete{
+.delete ion-icon{
+    position: relative;
     right: -5px;
-    padding: 5px 5px;
-    background: #d14242;
-    border-radius: 4px;
-    transform-origin: top right;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease;
-    z-index: 10;
+    padding: 5px;
+    background-color: #d14242; /* Background color for the delete icon */
+    border-radius: 50%; /* Make the delete icon circular */
+    color: #fff; /* Text color for the delete icon */
+    cursor: pointer;
+    font-size: 20px; /* Adjust the font size of the delete icon */
 }
 
 #check-task{
@@ -141,4 +141,8 @@ body{
 
 .task label input{
     margin-top: 3px;
+}
+
+.checked {
+    text-decoration: line-through;
 }

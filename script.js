@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", function() {
             taskSection.innerHTML +=
                 `<div class="task">
                 <label id="taskname">
-                <input onclick="updateTask(this)" type="checkbox" id="check-task">
+                <input type="checkbox" id="check-task">
                 <p>${document.querySelector('#newtask input').value}</p>
                 </label>
                 <div class="delete">
-                <i class="uil uil-trash"></i></div>`;
+                <ion-icon name="trash-outline"></ion-icon></div>`;
 
             // Adding click event listener to delete tasks
             var current_tasks = document.querySelectorAll(".delete");
@@ -42,13 +42,19 @@ document.addEventListener("DOMContentLoaded", function() {
             taskSection.offsetHeight >= 300 ?
                 taskSection.classList.add("overflow") :
                 taskSection.classList.remove("overflow");
+            
+            // Add event listener to the newly created checkbox
+            let checkbox = taskSection.lastElementChild.querySelector('input[type="checkbox"]');
+            checkbox.addEventListener("change", function() {
+                updateTask(this);
+            });
         }
     }
 
     // Function to update a task
-    function updateTask(task) {
-        let taskItem = task.parentElement.lastElementChild;
-        if (task.checked) {
+    function updateTask(checkbox) {
+        let taskItem = checkbox.parentElement.querySelector('p'); // Get the paragraph element inside the task
+        if (checkbox.checked) {
             taskItem.classList.add("checked");
         } else {
             taskItem.classList.remove("checked");
