@@ -51,9 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 updateTask(this);
             });
         }
-
     }
-  }
 
 
     // Function to update a task
@@ -64,7 +62,5 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             taskItem.classList.remove("checked");
         }
-
     }
-  }
 });
