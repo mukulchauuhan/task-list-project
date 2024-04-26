@@ -1,42 +1,42 @@
 *,
 *:before,
-*:after {
+*:after{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
+body{
     height: 100vh;
     background: #6596dc;
 }
 
-#head-text {
-    margin-top: 50px;
-    margin-left: 10px;
-    font-family: sans-serif;
-    color: #0F62FE;
+#head-text{
+    margin: 50px 0px 0px 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #080808;
+    
 
 }
 
-.container {
+.container{
     width: 40%;
     top: 30%;
     left: 50%;
-    background: white;
+    background: rgb(255, 47, 203);
     border-radius: 1px;
     min-width: 450px;
     position: absolute;
     min-height: 100px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 
-#newtask {
+#newtask{
     position: relative;
     padding: 30px 20px;
 }
 
-#newtask input {
+#newtask input{
     width: 75%;
     height: 45px;
     padding: 12px;
@@ -46,61 +46,61 @@ body {
     border-radius: 5px;
     font-family: sans-serif;
     font-size: 15px;
-    border: 2px solid #33B1FF;
+    border: 2px solid #000000;
 }
 
-#newtask input:focus {
+#newtask input:focus{
     outline: none;
     border-color: #0D75EC;
 }
 
-#newtask button {
+#newtask button{
     position: relative;
     float: right;
     font-weight: 500;
     font-size: 16px;
     background-color: #0F62FE;
     border: none;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor: pointer;
     outline: none;
     width: 20%;
     height: 45px;
     border-radius: 5px;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.tasks {
+.tasks{
     position: absolute;
-    border-radius: 0px;
+    border-radius: 2px;
     width: 100%;
     /*position: relative;*/
-    background-color: #FFFFFF;
+    background-color: whitesmoke;
     padding: 30px 20px;
     margin-top: 0px;
     justify-content: space-between;
 }
 
-.tasks.overflow {
+.tasks.overflow{
     overflow-y: auto;
     max-height: 300px;
 }
 
-.tasks::-webkit-scrollbar {
+.tasks::-webkit-scrollbar{
     width: 10px;
 }
 
-.tasks::-webkit-scrollbar-track {
+.tasks::-webkit-scrollbar-track{
     background: #BAE6FF;
     border-radius: 25px;
 }
 
-.tasks::-webkit-scrollbar-thumb {
+.tasks::-webkit-scrollbar-thumb{
     background: #0D75EC;
     border-radius: 25px;
 }
 
-.task {
+.task{
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
@@ -112,7 +112,6 @@ body {
     width: 100%;
 }
 
-
 .delete ion-icon{
     position: relative;
     right: -5px;
@@ -122,14 +121,13 @@ body {
     color: #fff; /* Text color for the delete icon */
     cursor: pointer;
     font-size: 20px; /* Adjust the font size of the delete icon */
-
 }
 
-#check-task {
+#check-task{
     margin-right: 20px;
 }
 
-.task label {
+.task label{
     font-family: sans-serif;
     font-size: 15px;
     font-weight: 400;
@@ -137,11 +135,11 @@ body {
     align-items: flex-start;
 }
 
-.task label p.checked {
+.task label p.checked{
     text-decoration: line-through;
 }
 
-.task label input {
+.task label input{
     margin-top: 3px;
 }
 
