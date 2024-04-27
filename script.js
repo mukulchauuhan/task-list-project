@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function that creates a task
   function createTask() {
-    if (taskInput.value.length === 0) {
+    const taskValue = taskInput.value.trim();
+    if (taskInput.value.length === 0 || taskValue==="") {
       alert("The task field is blank. Enter a task name and try again");
     } else {
       // This block inserts HTML that creates each task into the task area div element
